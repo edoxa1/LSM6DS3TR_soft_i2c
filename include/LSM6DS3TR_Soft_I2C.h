@@ -76,15 +76,15 @@ typedef enum hpf_range {
 class LSM6DS3TR_Soft_I2C : SoftI2C {
 public:
     struct AccelData {
-        float accel_x;
-        float accel_y;
-        float accel_z;
+        float x;
+        float y;
+        float z;
     };
     
     struct GyroData {
-        float gyro_x;
-        float gyro_y;
-        float gyro_z;
+        float x;
+        float y;
+        float z;
     };
 
     struct GyroAccelMeasurement {

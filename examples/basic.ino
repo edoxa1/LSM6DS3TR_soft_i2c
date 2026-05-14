@@ -1,7 +1,7 @@
 #include "Arduino.h"
 #include "LSM6DS3TR_Soft_I2C.h"
 
-LSM6DS3TR_Soft_I2C sensor;
+LSM6DS3TR_Soft_I2C sensor(0x6A, 4, 5); // I2C address, SDA pin, SCL pin
 
 void setup() {
     Serial.begin(115200);
@@ -22,12 +22,12 @@ void loop() {
     LSM6DS3TR_Soft_I2C::GyroAccelMeasurement measurement;
     sensor.readGyroAccel(measurement);
     Serial.print("Temperature: "); Serial.print(measurement.temperature, 2); Serial.println(" °C");
-    Serial.print("Gyro X: "); Serial.print(measurement.gyro.gyro_x, 2); Serial.println(" rad/s");
-    Serial.print("Gyro Y: "); Serial.print(measurement.gyro.gyro_y, 2); Serial.println(" rad/s");
-    Serial.print("Gyro Z: "); Serial.print(measurement.gyro.gyro_z, 2); Serial.println(" rad/s");
-    Serial.print("Accel X: "); Serial.print(measurement.accel.accel_x, 2); Serial.println(" m/s^2");
-    Serial.print("Accel Y: "); Serial.print(measurement.accel.accel_y, 2); Serial.println(" m/s^2");
-    Serial.print("Accel Z: "); Serial.print(measurement.accel.accel_z, 2); Serial.println(" m/s^2");
+    Serial.print("Gyro X: "); Serial.print(measurement.gyro.x, 2); Serial.println(" rad/s");
+    Serial.print("Gyro Y: "); Serial.print(measurement.gyro.y, 2); Serial.println(" rad/s");
+    Serial.print("Gyro Z: "); Serial.print(measurement.gyro.z, 2); Serial.println(" rad/s");
+    Serial.print("Accel X: "); Serial.print(measurement.accel.x, 2); Serial.println(" m/s^2");
+    Serial.print("Accel Y: "); Serial.print(measurement.accel.y, 2); Serial.println(" m/s^2");
+    Serial.print("Accel Z: "); Serial.print(measurement.accel.z, 2); Serial.println(" m/s^2");
 
     // Alternatively, you can use toString():
     // Serial.println(measurement.toString());
