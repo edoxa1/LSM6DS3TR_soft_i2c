@@ -94,12 +94,12 @@ public:
         String toString() const {
             String s;
             s += "temp=" + String(temperature, 2);
-            s += ", accel=(" + String(accel.accel_x, 3) + ", ";
-            s += String(accel.accel_y, 3) + ", ";
-            s += String(accel.accel_z, 3) + ")";
-            s += ", gyro=(" + String(gyro.gyro_x, 3) + ", ";
-            s += String(gyro.gyro_y, 3) + ", ";
-            s += String(gyro.gyro_z, 3) + ")";
+            s += ", accel=(" + String(accel.x, 3) + ", ";
+            s += String(accel.y, 3) + ", ";
+            s += String(accel.z, 3) + ")";
+            s += ", gyro=(" + String(gyro.x, 3) + ", ";
+            s += String(gyro.y, 3) + ", ";
+            s += String(gyro.z, 3) + ")";
             return s;
         }   
     };
