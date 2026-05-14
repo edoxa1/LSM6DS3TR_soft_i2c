@@ -1,0 +1,23 @@
+{
+  "name": "LSM6DS3TR Software I2C",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": "LSM6DS3TR, i2c, I2C, LSM6DS3TR i2c, software i2c, LSM6DS3TR software i2c",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/edoxa1/LSM6DS3TR_soft_i2c"
+  },
+  "authors":
+  [
+    {
+      "name": "edoxa1"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "Testato/SoftwareWire": "~1.6.0"
+  },
+  "frameworks": "arduino",
+  "platforms": "atmelavr"
+}
